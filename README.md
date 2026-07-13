@@ -1,2 +1,15 @@
-# javascript-learning-journey
-A structured JavaScript learning repository containing solved exercises, logic-building problems, loops, functions, arrays, objects, DOM practice during my journey to become a Web Developer.
+Welcome to my JavaScript Learning Journey 
+
+This repository documents my progress as I learn JavaScript from beginner to advanced level.
+
+## 📚 Topics Covered
+
+- Variables
+- Data Types
+- Operators
+- Control Flow
+- Loops
+
+
+To build strong JavaScript fundamentals and become a professional Full Stack Web Developer.
+⭐ Thank you for visiting my repository
