@@ -9,6 +9,7 @@ This repository documents my progress as I learn JavaScript from beginner to adv
 - Operators
 - Control Flow
 - Loops
+- Template literals
 
 
 To build strong JavaScript fundamentals and become a professional Full Stack Web Developer.
