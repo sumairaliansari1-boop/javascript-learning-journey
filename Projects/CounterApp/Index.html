@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+
+    <Style>
+         * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f1f5f9;
+    }
+
+    #counterContainer {
+        width: auto;
+        padding: 40px 30px;
+        text-align: center;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    #counterContainer h1 {
+        font-size: 80px;
+        margin-bottom: 30px;
+        color: black;
+        transition: 0.2s ease;
+    }
+
+    button {
+        border: none;
+        padding: 12px 20px;
+        margin: 5px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+
+    #decrease {
+        background: #fee2e2;
+        color: #8a1a1a;
+    }
+
+    #reset {
+        background: #e2e8f0;
+        color: #334155;
+    }
+
+    #increase {
+        background: #dcfce7;
+        color: #15803d;
+    }
+
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+    </Style>
+  </head>
+  <body>
+    <div id="counterContainer">
+      <h3>Counter App</h3>
+      <br />
+
+      <h1 id="count">0</h1>
+
+      <button id="decrease">-</button>
+      <button id="reset">Reset</button>
+      <button id="increase">+</button>
+    </div>
+
+    <script>
+      let count = document.querySelector("#count");
+      let counterContainer = document.querySelector("#counterContainer");
+
+      counterContainer.addEventListener("click", (x) => {
+        if (x.target.id === "reset") {
+          count.textContent = 0;
+        }
+
+        if (x.target.id === "increase") {
+          count.textContent = Number(count.textContent) + 1;
+        }
+
+        if (x.target.id === "decrease") {
+          count.textContent = Number(count.textContent) - 1;
+        }
+
+        if (Number(count.textContent) < 0) {
+          count.style.color = "#db162f";
+        } else {
+          count.style.color = "black";
+        }
+      });
+    </script>
+  </body>
+</html>
