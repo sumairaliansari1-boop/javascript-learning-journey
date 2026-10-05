@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number Generator</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: Arial, sans-serif;
+        background-color: #eeeae3;
+        color: #24211e;
+      }
+
+      .container {
+        width: 400px;
+        padding: 30px;
+        text-align: center;
+
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
+      .container h1 {
+        margin-bottom: 25px;
+        font-size: 30px;
+      }
+
+      #number {
+        width: 100%;
+        padding: 25px;
+        margin-bottom: 25px;
+
+        background-color: #24211e;
+        color: white;
+
+        border-radius: 8px;
+
+        font-size: 50px;
+        font-weight: bold;
+      }
+
+      #generate {
+        width: 50%;
+        padding: 12px;
+
+        border: none;
+        border-radius: 6px;
+
+        background-color: #bf2d2d;
+        color: white;
+
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      #generate:hover {
+        background-color: #a92525;
+      }
+
+      @media (max-width: 500px) {
+        .container {
+          width: 90%;
+        }
+
+        #number {
+          font-size: 40px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="randomContainer">
+      <h1>Random Number Generator</h1>
+
+      <h2 id="randomNumber">0</h2>
+
+      <button id="generate">Generate</button>
+    </div>
+
+    <script>
+      let numberChange = document.querySelector("#randomNumber");
+      let btn = document.querySelector("#generate");
+
+      btn.addEventListener("click", (x) => {
+        numberChange.textContent = Math.floor(Math.random() * 100) + 1;
+      });
+    </script>
+  </body>
+</html>
